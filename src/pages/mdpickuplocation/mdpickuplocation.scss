@@ -1,0 +1,27 @@
+page-mdpickuplocation {
+  .toolbar-background{
+    background-color: #0372b7;
+    color:#ffff;
+  }
+  .toolbar-title{
+    color: #fff;
+  }
+      .toolbar{
+        min-height: 50px;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+      }
+      button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button {
+        color: #fff;
+    }
+    .toolbar-ios ion-title{
+        padding: 0;
+    }
+    ion-title{
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 12px;
+    }
+}

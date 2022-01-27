@@ -1,0 +1,114 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Payment</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div *ngIf="!subscription" >
+        <div class="tab">
+            <ion-segment [(ngModel)]="payment">
+                <ion-segment-button value="debitCard" style="border-radius: 10px 0px 0px 10px; margin-left: 10px">
+                    Select Pricing Plan
+                </ion-segment-button>
+                <ion-segment-button value="creditCard" style="border-radius: 0px 10px 10px 0px; margin-right: 10px;">
+                    Enter Payment
+                </ion-segment-button>
+            </ion-segment>
+    
+        </div>
+        <div [ngSwitch]="payment">
+    
+            <div *ngSwitchCase="'debitCard'">
+                <ion-item class="p_0">
+                    <div class="content" *ngFor="let price of priceList">
+                        <div>
+                            <h2 class="plan-name">{{price.plan_name}}</h2>
+                            <div *ngFor="let prc of price.plan_detail">
+                                <p (click)="viewPrice(prc)">{{prc.visits}} Visits Per Month: {{prc.price | currency: 'USD': true}}
+                                    (includes {{prc.free_visits}} free visits)<img src="assets/imgs/dArrow.png" style="    max-width: 12px;
+                                border: 0;
+                                margin: 0 12px;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" *ngFor="let price of hourlyplan">
+                        <div>
+                            <h2 class="plan-name">{{price.plan_name}}</h2>
+                            <div *ngFor="let prc of price.pricing_details">
+                                <p (click)="viewPrice(prc.price,prc.id)">1 Visit : {{prc.price | currency: 'USD': true}} per hour <img
+                                        src="assets/imgs/dArrow.png" style="    max-width: 12px;
+                                border: 0;
+                                margin: 0 12px;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+    
+            <ion-list *ngSwitchCase="'creditCard'">
+                <div class="payment-dsign">
+                    <h3>Total Amount for Visit: <span>{{total_price | currency: 'USD': true}}</span></h3>
+                    <ion-item>
+                        <ion-label class="card-lable">Card Number</ion-label>
+                        <ion-input type="number" [(ngModel)]="cardNumber" (ionChange)="checkValue()" required
+                            placeholder="Card Number"></ion-input>
+                    </ion-item>
+                    <div class="error" *ngIf="cardNumberInvalid">Please enter valid Card Number</div>
+                    <ion-item>
+                        <ion-label class="card-lable">Expiration Date</ion-label>
+                        <ion-datetime [(ngModel)]="expireOn" min="2019" max="2040-10-31" (ionChange)="checkValue()" required
+                            displayFormat="MM/YYYY" placeholder="MM/YYYY"></ion-datetime>
+                    </ion-item>
+                    <div class="error" *ngIf="expireOnInvalid">Please enter valid Expiration Date</div>
+                    <ion-item>
+                        <ion-label class="card-lable">CVV</ion-label>
+                        <ion-input type="number" required (ionChange)="checkValue()" [(ngModel)]="cvvNumber"
+                            placeholder="454"></ion-input>
+                    </ion-item>
+                    <div class="error" *ngIf="cvvNumberInvalid">Please enter valid CVV number</div>
+                    <ion-item class="check-lable">
+                        <ion-checkbox color="dark" [checked]="iAgree" (ionChange)="iAgree = !iAgree"></ion-checkbox>
+                        <ion-label>By using Nursing on Demand application, I agree to allow Nursing on Demand to
+                            share this information with all medical providers
+                            associated with my care and with all medical professionals that are
+                            consulted regarding my care.</ion-label>
+                    </ion-item>
+                    <button class="bgss" [disabled]="!iAgree || cardNumberInvalid || expireOnInvalid || cvvNumberInvalid"
+                        (click)="PayAmount()">Pay {{total_price | currency: 'USD': true}}</button>
+                    <!-- <button class="okbtnss"  (click)="pay()">Skip payment for Test (in development)</button> -->
+                </div>
+            </ion-list>
+        </div>
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <div class="paybox">
+        <div class="white-boxss">
+            <img style="display: block;
+            float: none;
+            margin: 0 auto;" src="assets/imgs/chekss.png">
+            <h3>Thank you !</h3>
+            <p *ngIf="!subscription" style="    line-height: 22px;
+            font-size: 13px;
+        ">Your remaining visits are 1/{{totalVisit}} visit charges {{total_price | currency: 'USD': 'symbol' : '.2-2'}} have been deducted from your price plan.</p>
+            <p *ngIf="subscription" style="    line-height: 22px;
+            font-size: 13px;
+        ">Your remaining visits are {{subscription.visit_completed + 1}}/{{subscription.total_visit}} visit charges have been deducted from your subscription plan.</p>
+            <button class="okbtnss" (click)="pay()">Ok</button>
+        </div>
+    </div>
+</ion-footer>

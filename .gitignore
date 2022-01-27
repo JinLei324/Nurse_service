@@ -1,0 +1,4 @@
+node_modules/
+_google-services.json
+google-services.json
+GoogleService-Info.plist

@@ -1,0 +1,85 @@
+<!--
+  Generated template for the PaymentdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <p style="text-align: center;color: #3991ca;font-size: 14px;">{{priceName}}</p>
+  <p style="color: #666;margin-left: 10%;"><small>Select your desired Plan</small></p>
+  <div class="payment-dsign">
+    <select>
+      <option>16 Visit Per Month</option>
+      <option>12 Visit Per Month</option>
+      <option>20 Visit Per Month</option>
+    </select>
+    <select>
+      <option>Select Card Type </option>
+      <option>Master Card</option>
+      <option>Visa Card</option>
+    </select>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Name on Credit Card"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Card Number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="CCV"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="    font-size: 16px;
+    color: #177ec0;
+    margin-left: 11px;">Payment Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" placeholder="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="    font-size: 16px;
+    color: #177ec0;
+    margin-left: 11px;">Expiration Date</ion-label>
+      <ion-datetime displayFormat="MM/YYYY" placeholder="MM/YYYY"></ion-datetime>
+    </ion-item>
+
+
+
+    <ion-item style="background-color: transparent">
+      <ion-label>I agree to Terms of use Privacy Policy</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
+
+
+    <button class="bgss" (click)="modalss()">Pay</button>
+
+  </div>
+
+
+
+<div class="pop-box">
+<div class="pop-body">
+<h4>Your Desired Plan is Successfuly Activated.</h4>
+  <button ion-button full class="btn-ok" (click)="ok()" style="background: #177ec0">Ok</button>
+</div>
+</div>
+
+</ion-content>

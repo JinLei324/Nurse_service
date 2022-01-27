@@ -1,0 +1,25 @@
+<!--
+  Generated template for the EditlocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Location search</ion-title>
+    <div class="header-i">
+      <button (click)="dIsmss()"> <img src="assets/imgs/close.png"></button>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<div class="list-design">
+ <google-places-autocomplete id="j21" disable class="kil" (callback)="detail($event[0])" key="AIzaSyCYQHauEaqFsGItbv4ZyHBGWm2FDxsF2nQ" placeholder="Please Enter Address" [(ngModel)]="address" style="padding: 0 10px; color: #177ec0;"></google-places-autocomplete>
+</div>
+
+</ion-content>

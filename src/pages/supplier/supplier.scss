@@ -1,0 +1,89 @@
+page-supplier {
+.btn_green{
+    width: 85%;
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    background: rgb(139, 195, 74);
+    color: #fff;
+    font-size: 16px;
+}
+.btn_leechi{
+    width: 85%;
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+    background: rgb(135, 59, 87);
+    color: #fff;
+    font-size: 16px;
+}
+.btn_sky{
+    width: 85%;
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+    background: rgb(0, 150, 136);
+    color: #fff;
+    font-size: 16px;
+}
+
+ion-icon{
+    position: relative;
+    top: 2px;
+}
+.toolbar-background{
+    background-color: #177ec0;
+    color:#ffff;
+  }
+  .toolbar-title{
+    color: #fff;
+  }
+  .toolbar{
+    min-height: 50px;
+  }
+  span.button-inner {
+    color: #fff;
+}
+  ion-content{
+    background-color: #f6f7fb !important;
+  }
+  .box-dsss{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    position: relative;
+    margin-bottom: 53px;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 133px;
+    object-fit: contain;
+  }
+  .paddingss{
+    padding: 0 17px;
+  }
+  .btn{
+    background-color: #177ec0;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -32px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

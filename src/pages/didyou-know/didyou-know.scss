@@ -1,0 +1,50 @@
+page-didyou-know {
+  ion-content{
+    background-color: #f6f7fb !important;
+  }
+  .toolbar-title{
+    color: #fff;
+  }
+  .toolbar{
+    min-height: 50px;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #fff;
+  }
+  .segment-md .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .card{
+    background-color: #f2f0f2;
+  }
+  ion-card-title{
+    font-size: 16px !important;
+    color: #000 !important;
+    text-align: center;
+    line-height: 22px !important;
+    font-weight: 500;
+  }
+  .con10{
+    font-size: 13px;
+    color: #000;
+    text-align: left;
+  }
+  button{
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: 4px 7px;
+    margin-top: 5px;
+    float: right;
+    font-size: 12px;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+    color:#fff;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

@@ -1,0 +1,53 @@
+page-nursing-personal {
+  .toolbar-background{
+    background-color: #374fcc;
+    color:#ffff;
+  }
+  .toolbar-title{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .toolbar{
+    min-height: 50px;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #fff;
+  }
+  .segment-md .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .service-design ul{
+    padding: 0;
+    margin-left: 26px;
+  }
+  .service-design ul li{
+    color: #000;
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 22px;
+  }
+  .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+    border-color: #009688;
+    color: #fff;
+    background: #009688;
+  }
+  .segment-ios .segment-button.activated, .segment-ios .segment-button.segment-activated{
+    border-color: #009688;
+    color: #fff;
+  }
+  .segment-ios .segment-button.segment-activated{
+    background-color: #009688;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+    color:#fff;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

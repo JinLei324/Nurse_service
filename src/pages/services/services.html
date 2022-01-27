@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Services  <ion-icon style="float: right;" name="information-circle" (click)="viewServices()"></ion-icon></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <div class="box-imgss" *ngFor="let services of servicesList" >
+  <img src={{services.service_type_image}} (click)="servicecheck(services.id)">
+
+  </div>
+
+
+</ion-content>

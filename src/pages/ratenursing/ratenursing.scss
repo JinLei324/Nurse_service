@@ -1,0 +1,76 @@
+page-ratenursing {
+
+  ul {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+
+    &.rating li {
+      padding: 5px 2px !important;
+      background: none;
+      color: #ffb400;
+
+      ion-icon {
+        font-size: 43px;
+      }
+    }
+  }
+
+  .toolbar-background{
+    background-color: #374fcc;
+    color:#ffff;
+  }
+  ion-title.title.title-ios{
+    padding: 0;
+  }
+  .toolbar-title{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+  
+  }
+  .toolbar{
+    min-height: 50px;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+    color:#fff;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #fff;
+  }
+  .segment-md .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .aa10{
+    text-align: center;
+    margin: 20px 0;
+  }
+  textarea{
+    padding: 6px;
+    font-size: 13px;
+    height:115px;
+    border: 1px solid #d4cece;
+    resize: none;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .btn-login{
+    background-color: #374fcc;
+    font-size: 13px;
+    text-transform: inherit;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+  .toolbar-title.toolbar-title-ios{
+    white-space: normal !important;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

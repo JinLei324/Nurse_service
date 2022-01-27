@@ -1,0 +1,49 @@
+page-schedulevisit {
+  .onddemand h3{
+    text-align: center;
+    font-size: 16px;
+    color: #177ec0;
+  }
+  .onddemand p{
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #544848;
+    font-weight: normal;
+  }
+  .onddemand{
+    margin: 15px 0;
+  }
+  .list-md .item-block .item-inner{
+    border: none;
+  }
+  .input-wrapper{
+    font-size: 15px;
+  }
+  .btn-next:hover{
+    background: #177ec0;
+  }
+  .btn-next{
+
+    border-radius: 5px;
+    height: 40px;
+    text-transform: capitalize;
+    width: 85%;
+    margin: 10px auto;
+    margin-top: 25%;
+  }
+
+ 
+  .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #177ec0;
+}
+  ion-item{
+    margin-bottom: 15px;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

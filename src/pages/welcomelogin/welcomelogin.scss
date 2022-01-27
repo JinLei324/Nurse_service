@@ -1,0 +1,54 @@
+page-welcomelogin {
+ .title-heading{
+  line-height: 23px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 18px;
+    color: #666;
+ }
+  .padding-amange{
+    padding: 15px;
+  }
+  .imglogo{
+    display: block;
+    margin: 25px auto;
+    margin-top: 55px;
+  }
+  .welcom1{
+    // text-align: center;
+    // display: block;
+    margin: 9px auto;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 18px;
+    color: #666;
+  }
+  .we2{
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 18px;
+    color: #666;
+    margin-top: 19px;
+  }
+.btn-sign{
+  background-color: #458fd0;
+    border-radius: 5px;
+    height: 40px;
+    text-transform: capitalize;
+    width: 85%;
+    margin: 5px auto;
+
+
+}
+  ion-content{
+    background-color: #f6f7fb !important;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

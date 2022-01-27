@@ -1,0 +1,33 @@
+page-thankyourating {
+    .scroll-content {
+        background: #000;
+    }
+    .happy{
+        color: #177ec0;
+    font-size: 70px;
+    text-align: center;
+    margin: 70% auto 0;
+    display: block;
+    }
+    p{
+        text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 100;
+    }
+    .close{
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        color: #177ec0;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    ion-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 12px;
+      }
+}

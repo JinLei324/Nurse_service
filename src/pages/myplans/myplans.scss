@@ -1,0 +1,72 @@
+page-myplans {
+  .content-md {
+    color: #000 !important;
+    background-color: #f6f7fb !important;
+}
+  .toolbar{
+    min-height: 50px;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #fff;
+  }
+  .segment-md .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .total-heading p{
+    margin: 0;
+    color: #177ec0;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .total-heading p span{
+    text-align: right;
+    float: right;
+  }
+  .bg-plans{
+    background-color: #fff;
+    padding:10px;
+    margin-top: 13px;
+  }
+  .purches-p h2{
+    font-size: 16px;
+    color: #177ec0;
+    margin-top: 2px !important;
+    margin-bottom: 0;
+  }
+  .purches-p p{
+    font-size: 13px;
+    line-height: 18px;
+    margin: 7px 0;
+  }
+ 
+  .purches-p p span{
+    text-align: right;
+    float: right;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+    color:#fff;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+  .noplans h3{
+    text-align: center;
+    font-size: 18px;
+    color: #8c8b8b;
+  }
+  .noplans{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+  }
+  .noplans img{
+    display: block;
+    margin: 0 auto;
+  }
+  
+}

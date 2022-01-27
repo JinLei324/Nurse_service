@@ -1,0 +1,47 @@
+<!--
+  Generated template for the FamilyprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Family Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row class="info-dada" *ngFor="let family of familydata">
+    <h1>{{family.relation}}-{{family.firstname }} {{ family.lastname}} <span style="float: right"> <ion-icon name="create" (click)="viewFamily(family.id)" class="edit"></ion-icon>
+    </span></h1>
+  <ion-col col-5 class="user">
+   <img src="{{family.image ? family.image : image}}" style=" width: 115px;
+   height: 115px;
+   object-fit: contain;">
+  </ion-col>
+    <ion-col col-7>
+    <div class="img-content">
+     <h3>Personal info</h3>
+      <p>Contact No.: <strong>{{family.phone_number ? family.phone_number : 'N/A'}}</strong></p>
+      <p>Email: <strong>{{family.email ? family.email : 'N/A'}}</strong></p>
+    </div>
+
+      <div class="img-content">
+        <h3>Doctors info</h3>
+        <p>Name: <strong>{{family.doctor_name ? family.doctor_name  : 'N/A'}}</strong></p>
+        <p>Contact No.: <strong>{{family.doctor_phone_number ? family.doctor_phone_number : 'N/A'}}</strong></p>
+        <p>Email: <strong>{{family.doctor_email ? family.doctor_email : 'N/A'}}</strong></p>
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

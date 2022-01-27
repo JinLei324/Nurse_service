@@ -1,0 +1,276 @@
+<!--
+  Generated template for the RequesthistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Request History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+  <div class="tab" padding>
+
+    <ion-segment [(ngModel)]="current">
+      <ion-segment-button value="current" style="border-radius: 10px 0px 0px 10px;border-left: 2px solid #177ec0;">
+        Current
+      </ion-segment-button>
+      <ion-segment-button value="scheduled">
+        Scheduled
+      </ion-segment-button>
+      <ion-segment-button value="completed" style="border-radius: 0px 10px 10px 0px;">
+        Completed
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+
+  <div [ngSwitch]="current">
+
+    <ion-list *ngSwitchCase="'current'">
+
+      <div *ngIf="datatrue">
+
+        <div *ngFor="let current of currentData">
+          <ion-row>
+            <div class="closebtn">
+              <button (click)="cancil(current.id)">Close Request</button>
+            </div>
+
+
+            <ion-col col-2>
+              <img style=" margin-left: 3px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #0372b7;" src={{current.nurse_image}}>
+            </ion-col>
+
+            <ion-col col-10>
+              <h2 class="name1">{{current.nurse_name}}</h2>
+              <p class="time10">{{current.created_date | date}} {{current.created_date | date:'shortTime'}}</p>
+              <p class="time10">{{current.request_id}}</p>
+            </ion-col>
+
+
+          </ion-row>
+
+          <ion-row class="cancel-m">
+            <!-- <ion-col col-6>
+        <button (click)="viewRequest()">View Request Status</button>
+       </ion-col> -->
+            <!-- <ion-col col-12>
+          <button (click)="cancil(current.id)">Cancel Request</button>
+        </ion-col> -->
+          </ion-row>
+
+          <div class="other-deails">
+            <p>Other Details</p>
+          </div>
+
+          <ion-row>
+            <ion-col col-5>
+              <ul class="lis-heart">
+                <li><img style="margin-left: 3px;" src="assets/imgs/r1.png"> <span>Service Type</span></li>
+                <li><img style="margin-left: 3px;" src="assets/imgs/r2.png"> <span>NURSE ID</span></li>
+                <li><img style="margin-left: 3px;" src="assets/imgs/r3.png"> <span>Nurse category</span></li>
+                <li><img style="margin-left: 3px;" src="assets/imgs/r5.png"> <span>Visit Charges</span></li>
+              </ul>
+            </ion-col>
+
+            <ion-col col-7 class="managr30">
+              <p>{{current.service_type_name}}</p>
+              <p>{{current.nurse_unique_id}}</p>
+              <p>{{current.nurse_type}}</p>
+              <p>$ {{current.visit_charge}}</p>
+            </ion-col>
+
+          </ion-row>
+
+          <div class="other-deails">
+            <p>Services</p>
+          </div>
+
+          <div class="service-design">
+            <ul>
+              <li *ngFor="let serv of current.services ">{{serv}}</li>
+            </ul>
+            <!-- <a class="view_more">View more services</a> -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hidenodata" *ngIf="!datatrue">
+        <p>No data found!</p>
+      </div>
+
+
+    </ion-list>
+
+
+
+
+    <ion-list *ngSwitchCase="'scheduled'">
+      <div *ngIf="datatrue1">
+
+
+
+        <div class="shidule show13" *ngFor="let sched of scheduleData">
+          <ion-row class="m20">
+            <ion-col col-3>
+              <img style="border-radius: 50%;" src={{sched.nurse_image}}>
+            </ion-col>
+
+            <ion-col col-9>
+              <h2 class="name1">{{sched.nurse_name}}</h2>
+              <p class="time10">{{sched.created_date}}</p>
+              <p class="time10">{{sched.request_id}}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="cancel-m">
+            <ion-col col-4 class="padding-manage">
+              <button style="margin: 0;"
+                (click)="viewDetails(sched.service_type_name,sched.nurse_unique_id,sched.nurse_type,sched.visit_charge,sched.services)">View
+                Details</button>
+            </ion-col>
+
+            <ion-col col-4 class="padding-manage">
+              <button style="margin: 0;"
+                (click)="aditionDetails(sched.visit_name,sched.care_person,sched.contact_address,sched.contact_number,sched.doctor_order,sched.medical_facility,sched.needs)">Additional
+                Details</button>
+            </ion-col>
+
+            <ion-col col-4 class="padding-manage">
+              <button style="margin: 0;    border-color: red;
+    color: red;" (click)="popup()">Cancel</button>
+            </ion-col>
+          </ion-row>
+
+          <div class="close-rew2">
+            <div class="white-boxss">
+              <p>Are you sure to Cancel this Request from Scheduled Requests ?</p>
+              <button style="    border-bottom-left-radius: 5px;" (click)="cancel()" class="btn-clsoess">Cancel
+              </button>
+              <button style="    border-bottom-right-radius: 5px;" (click)="ok(sched.id)" class="btn-clsoess">Ok
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidenodata" *ngIf="!datatrue1">
+        <p>No data found!</p>
+      </div>
+
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'completed'">
+      <div *ngIf="datatrue2">
+
+        <div class="shidule" *ngFor="let com of completeData">
+          <ion-row class="m20">
+            <ion-col col-3>
+              <img style="border-radius: 50%;" src={{com.nurse_image}}>
+            </ion-col>
+
+            <ion-col col-9>
+              <h2 class="name1">{{com.nurse_name}}</h2>
+              <p class="time10">{{com.created_date}}</p>
+              <p class="time10">{{com.request_id}}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="cancel-m">
+            <ion-col col-2 class="padding-manage"></ion-col>
+            <ion-col col-5 class="padding-manage">
+              <button style="margin: 0;"
+                (click)="completeView(com.service_type_name,com.nurse_unique_id,com.nurse_type,com.visit_charge,com.services)">View
+                Details</button>
+            </ion-col>
+
+            <ion-col col-5 class="padding-manage">
+              <button style="margin: 0;"
+                (click)="aditionDetails(com.visit_name,com.care_person,com.contact_address,com.contact_number,com.doctor_order,com.medical_facility,com.needs)">Additional
+                Details</button>
+            </ion-col>
+
+            <!--                 <ion-col col-4 class="padding-manage">
+                    <button style="margin: 0;border-color: red;color: red" (click)="removePop()">Remove</button>
+                </ion-col> -->
+          </ion-row>
+          <div class="close-rew1">
+            <div class="white-boxss">
+              <p>Are you sure to Remove this Request from Completed Requests ? </p>
+              <button style="    border-bottom-left-radius: 5px;" (click)="remove()" class="btn-clsoess">Cancel
+              </button>
+              <button style="    border-bottom-right-radius: 5px;" (click)="removeok()" class="btn-clsoess">Ok </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="hidenodata" *ngIf="!datatrue2">
+        <p>No data found!</p>
+      </div>
+    </ion-list>
+  </div>
+
+  <div class="close-rew">
+    <div class="white-boxss">
+      <p>Are you sure to Close this CAre Request ?</p>
+      <button style="    border-bottom-left-radius: 5px;" (click)="hidepooss1()" class="btn-clsoess">Cancel </button>
+      <button style="    border-bottom-right-radius: 5px;" (click)="hidepooss()" class="btn-clsoess">Ok </button>
+    </div>
+  </div>
+
+  <!-- <div class="pop-box-rating">
+    <div class="rating-box">
+        <h4> How do you feel about the services you just received?</h4>
+        <img src="assets/imgs/rating.png">
+        <p>Paula Anderson</p>
+        <p>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+        </p>
+        
+
+
+        <ion-item>
+            <ion-label> It was Good</ion-label>
+            <ion-checkbox  checked="true"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>It was Okay</ion-label>
+            <ion-checkbox ></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>It was Dissapointing</ion-label>
+            <ion-checkbox></ion-checkbox>
+          </ion-item>
+          <p>Thanks! Anything else you'd want to say?</p>
+          <textarea rows="4" placeholder="Message"></textarea>
+          <button ion-button full class="btn-done" (click)="go_done()">Done</button>
+          <ion-icon name="close" class="close" (click)="close_done()"></ion-icon>
+    </div>
+</div> -->
+</ion-content>

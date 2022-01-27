@@ -1,0 +1,69 @@
+page-electronicnotes {
+    .toolbar-background{
+        background-color: #374fcc;
+        color:#ffff;
+      }
+      .toolbar-title{
+        color: #fff;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .toolbar{
+        min-height: 50px;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+      }
+      button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+          color:#fff;
+      }
+      .plus{
+        color: #fff;
+        font-size: 30px;
+        top: 11px;
+        position: absolute;
+        right: 12px;
+      }
+      .toolbar-title-md{
+          padding: 0 !important;
+      }
+      ion-icon.plus.icon.icon-ios.ion-ios-add {
+        top: 28px;
+    }
+    .para_p{
+        width: 95%;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 14px;
+        color:#3F51B5;
+    }
+    .radio-md .radio-icon{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .radio-md .radio-inner{
+        top:7px !important;
+        left: 7px !important;
+    }
+    .done{
+        margin: 10px auto;
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #374fcc;
+    text-transform: capitalize;
+    }
+    ion-radio.radio.radio-ios {
+        border: 2px solid #7e7e7e;
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+    }
+    ion-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 12px;
+      }
+}

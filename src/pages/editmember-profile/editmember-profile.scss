@@ -1,0 +1,132 @@
+page-editmember-profile {
+    .content-md {
+        background-color: #f6f7fb;
+    }
+      .toolbar-md{
+        min-height: 50px;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+      }
+      .segment-md .segment-button{
+        text-transform: inherit;
+        font-size: 14px;
+      }
+      input{
+        border-radius: 8px;
+        border: none;
+        width: 80%;
+        margin: 7px auto;
+        display: block;
+        height: 40px;
+        padding: 7px;
+      }
+      ion-item.item.item-block.item.item-select, ion-item.item.item-block.item.item-datetime{
+        border-radius: 8px;
+        border: none;
+        width: 80%;
+        margin: 7px auto;
+        display: block;
+        height: 40px;
+        // padding: 7px;
+      }
+      .input-wrapper {
+        border: none !important;
+    }
+      .forgot{
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        color: #000;
+        font-size: 11px;
+      }
+      .text-center{
+        text-align: right;
+      }
+      .btn-login{
+        background-color: #177ec0;
+        width: 80%;
+        border-radius: 8px;
+        margin: 10px auto;
+        height: 40px;
+        display: block;
+      }
+      .btn-login:hover{
+        background-color: #177ec0 !important;
+      }
+      .btn-fb{
+        background-color: #3b5998;
+        color: #fff;
+        font-size: 13px;
+        text-transform: inherit;
+        margin-top: 11px;
+        border-radius: 2px;
+      }
+      .btn-sign{
+        background-color: transparent;
+        color: #000;
+        box-shadow: none;
+        font-size: 13px;
+        margin-top: 19px;
+        text-transform: inherit;
+      }
+      .label-md,.label-ios{
+        font-size: 14px;
+        margin: 0;
+      }
+      .item-md, .item-ios{
+        padding-left: 0px;
+      }
+      .input-wrapper{
+        border: 1px solid #ccc;
+        padding: 0px 5px;
+      }
+      .datetime-md,.datetime-ios {
+        padding: 6px 8px 5px 16px;
+      }
+      .item-md.item-block .item-inner,.item-ios.item-block .item-inner{
+        padding-right: 0;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+      }
+      .info-dada h1{
+        font-size: 18px;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        color: #177ec0;
+        margin: 5px 0 0;
+      }
+      .input-wrapper{
+        height: 37px;
+      }
+      .item-md.item-block .item-inner{
+        border: none;
+      }
+      div{
+        width: 100%;
+      }
+      .edit-p img{
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 100%;
+      }
+      .edit-p{
+        margin-top:30px;
+      }
+      .eror{
+        color: #e20f0f;
+        text-align: center;
+      }
+      ion-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 12px;
+      }
+    
+}

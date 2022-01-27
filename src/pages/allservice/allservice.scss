@@ -1,0 +1,37 @@
+page-allservice {
+    .service-design ul{
+        padding: 0;
+        margin-left: 26px;
+      }
+      .service-design ul li{
+        color: #000;
+        font-size: 13px;
+        margin-bottom: 8px;
+        line-height: 22px;
+      }
+      .toolbar-background{
+        background-color: #374fcc;
+        color:#ffff;
+      }
+      .toolbar-title{
+        color: #fff;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .toolbar{
+        min-height: 50px;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+      }
+      button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+          color:#fff;
+      }
+      ion-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 12px;
+      }
+}

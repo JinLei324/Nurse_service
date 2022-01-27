@@ -1,0 +1,21 @@
+
+<ion-content class="padding-amange">
+  <img class="imglogo" src="assets/imgs/logo.png">
+  <ion-row padding>
+    <p class="title-heading">We are a boutique concierge nursing service that provides on-demand skilled nursing care to our clients in the comfort of their homes, place of work or any location where you and/or your loved ones need the care of a Nurse Practitioner, Physician Assistant, Registered Nurse, Nursing Assistant or Caregiver.</p>
+    <p class="welcom1">We believe in a personal touch. We are private owned and operated local business.</p>
+    <p class="we2">Concierge nursing provides a flexible approach to receiving healthcare.</p>
+    <p class="we2">We are private pay – no need to work through the hassles of your insurance company..</p>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="check" (ionChange)="notify(check)"></ion-toggle>
+      <ion-label> I Agree to <span style="color: #c11f2c; cursor: pointer;" (click)="launch()"> Terms of Use </span> and  <span  style="color: #62b773; cursor: pointer;" (click)="privacy()">Privacy Policy</span>  </ion-label>
+    </ion-item>
+
+  </ion-row>
+
+  <ion-row padding>
+    <button class="btn-sign" ion-button full (click)='nursingSlide()' style="background-color: #458fd0;">How can we help you</button>
+  </ion-row>
+
+</ion-content>

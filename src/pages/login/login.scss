@@ -1,0 +1,88 @@
+page-login {
+  .fixed-content{
+    background-image: url(../assets/imgs/login_bg.png);
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    opacity: .8;
+  }
+  .bar-button-default, .bar-button-clear-default, .bar-button-default{
+    color: #fff;
+  }
+  .segment .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .img-logo{
+    margin: 0 auto;
+    display: block;
+  }
+input{
+  padding: 13px 10px;
+    border-radius: 8px;
+    width: 85%;
+    font-size: 13px;
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background: #fff;
+}
+  .desin1{
+    margin-top:30px;
+    width: 100%;
+  }
+  .forgot{
+  background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    color: #c01e2d;
+    text-transform: capitalize;
+    margin-right: 8%;
+  }
+  .text-center{
+    text-align: right;
+  }
+  .btn-login{
+    background-color: #458fd0;
+    border-radius: 5px;
+    height: 40px;
+    text-transform: capitalize;
+    width: 85%;
+    margin: 10px auto;
+  }
+  .btn-fb{
+    background-color: #3b5998;
+    border-radius: 5px;
+    height: 40px;
+    text-transform: capitalize;
+    width: 85%;
+    margin: 10px auto;
+  }
+ 
+  .SignUp{
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    color: #c01e2d;
+    text-transform: capitalize;
+    margin-right: 8%;
+  }
+  
+
+  a[disabled], button[disabled], [ion-button][disabled] {
+    cursor: default;
+    opacity: 1;
+    pointer-events: none;
+}
+ion-icon.icon.icon.ion-logo-facebook{
+  font-size: 28px;
+}
+ion-title{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 12px;
+}
+}

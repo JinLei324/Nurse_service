@@ -1,0 +1,281 @@
+<!--
+  Generated template for the NeedscarePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+  <ion-row class="id1">
+    <div class="care-design">
+      <h5>WHO Needs Care</h5>
+      <ul>
+        <li class="active1"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>Share a few details so we can provide you with the best care</p>
+      <ion-list radio-group>
+        <ion-item *ngFor="let care of whosCare_list; let i = index ">
+          <ion-label>{{care.type}}</ion-label>
+          <ion-radio color="blue" checked="false" value={{care.id}} (click)="homeSlide1(care.id)"></ion-radio>
+        </ion-item>
+      </ion-list>
+      <button ion-button full class="next-btn" (click)="idtwo()" style="background: #177ec0">Next</button>
+    </div>
+  </ion-row>
+
+
+  <ion-row class="id2" style="display: none;">
+    <div class="care-design">
+      <ul>
+        <li class="active1"></li>
+        <li class="active1"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>Share a few details so we can provide you with the best care</p>
+      <div class="gender-change">
+        <p style="color: #177ec0;">Gender of individual needing care? </p>
+        <form id="test1">
+          <ion-row>
+            <ion-col col-6 (click)="males('Male')">
+              <label class="male1">
+                <input type="radio" name="gender" value="Male" style="visibility: hidden;position: absolute">
+                <span>M</span>
+              </label>
+              <p style="color: #000;margin: 3px;">Male</p>
+            </ion-col>
+            <ion-col col-6 (click)="female('Female')">
+              <label class="male2">
+                <input type="radio" name="gender" value="Female" style="visibility: hidden;position: absolute">
+                <span>F</span>
+              </label>
+              <p style="color: #000;margin: 3px;">Female</p>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
+      <div class="gender-change">
+        <p style="color: #177ec0;">Have you been recently discharged from a medical facility?</p>
+        <form id="test3">
+          <div class="care-design">
+            <div class="gender-change">
+              <ion-row>
+                <ion-col col-6 (click)="yeS1('yes')">
+                  <label class="yes1">
+                    <input type="radio" name="orders" value="yes" style="visibility: hidden;position: absolute">
+                    <span>Y</span>
+                  </label>
+                  <p style="color: #000;margin: 3px;">Yes</p>
+                </ion-col>
+                <ion-col col-6 (click)="nO1('no')">
+                  <label class="no1">
+                    <input type="radio" name="orders" value="no" style="visibility: hidden;position: absolute">
+                    <span>N</span>
+                  </label>
+                  <p style="color: #000;margin: 3px;">No</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+          <button ion-button full class="next-btn" (click)="homeSlide2()" style="background: #177ec0">Next</button>
+        </form>
+      </div>
+    </div>
+  </ion-row>
+
+
+  <ion-row class="id3" style="display: none;">
+      <div class="care-design">
+        <ul>
+          <li class="active1"></li>
+          <li class="active1"></li>
+          <li class="active1"></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p>Share a few details so we can provide you with the best care</p>
+        <div class="gender-change">
+          <p style="color: #177ec0;">Do you have a doctor's order?</p>
+          <div id="test3">
+            <div class="care-design">
+              <div class="gender-change">
+                <ion-row>
+                  <ion-col col-6 (click)="yeS('yes')">
+                    <label class="yes yes">
+                      <input type="radio" name="orders" value="yes" style="visibility: hidden;position: absolute">
+                      <span>Y</span>
+                    </label>
+                    <p style="color: #000;margin: 3px;">Yes</p>
+                  </ion-col>
+                  <ion-col col-6 (click)="nO('no')">
+                    <label class="no no">
+                      <input type="radio" name="orders" value="no" style="visibility: hidden;position: absolute">
+                      <span>N</span>
+                    </label>
+                    <p style="color: #000;margin: 3px;">No</p>
+                  </ion-col>
+                </ion-row>
+              </div>
+              <div class="gender-change">
+                <p style="color:    #177ec0;">Tell us about your needs (Optional)</p>
+                <textarea value="" id="message" [(ngModel)]="message" placeholder="I am suffering from fever for...."></textarea>
+                <p style="font-size: 12px;text-align: left;color: #000;">Please write description up to 250 characters only.</p>
+              </div>
+            </div>
+            <button ion-button full class="next-btn" (click)="homeSlide3(message)" style="background: #177ec0">Next</button>
+          </div>
+        </div>
+      </div>
+    </ion-row>
+
+  <ion-row class="id4" style="display: none;">
+      <div class="care-design">
+          <ul>
+            <li class="active1"></li>
+            <li class="active1"></li>
+            <li class="active1"></li>
+            <li class="active1"></li>
+            <li></li>
+          </ul>
+          <h4 style="color: #4e4c4f">Where do you need care</h4>
+          <p style="color: #177ec0;">Please tell us your best personal phone number to reach you and the address that you wish to receive our services.</p>
+
+        
+
+        <h6 style="position: relative;">
+          <ion-icon name="call" style="position: absolute; top: 13px;"></ion-icon> 
+          <i class="bgh" id="j1"></i> 
+            <ion-input id="j2" class="kil" type="text"  placeholder="Please Enter mobile" [(ngModel)]="mobile" style="padding: 0 10px; color: #177ec0;"> </ion-input>
+  
+            <span id="kl20" (click)="ediSave('j1','j2','jk20','kl20')"  class="anchr"  style="color: #177ec0; position: absolute;right: 0;top: 13px;">Edit</span>
+            <span id="jk20" (click)="saveEdit('kl20','jk20','j2','j1')"  class="anchr"  style="color: green; position: absolute;right: 0;top: 13px;display: none;">Save</span>
+          </h6>
+
+
+          <h6 style="position: relative;margin-bottom: 6em;">
+              <ion-icon name="pin" style="position: absolute; top: 13px;"></ion-icon> 
+              <i class="bgh" id="j11" (click)="ediSave1('j11','j21','jk201','kl201')"></i> 
+                 <p style="     position: absolute;
+                 left: 19px;
+                 top: -4px;
+                 white-space: nowrap;
+                 width: 84%;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 color: #177ec0;" class="kil" id="j21">{{address}}</p>
+                <span id="kl201" (click)="ediSave1('j11','j21','jk201','kl201')"  class="anchr"  style="color: #177ec0; position: absolute;right: 0;top: 13px;">Edit</span>
+                <span id="jk201" (click)="saveEdit1('kl201','jk201','j21','j11')"  class="anchr"  style="color: green; position: absolute;right: 0;top: 13px;display: none;">Save</span>
+              </h6>
+        
+
+          <div class="form_start">
+            <div class="gender-change">
+ 
+              <textarea id="message2" value="" [(ngModel)]="needMessage" placeholder="Write additional comments..(Optional)"></textarea>
+              <p style="font-size: 12px;text-align: left;color: #000;">Please write comment up to 250 characters only.</p>
+            </div>
+            <button ion-button full class="next-btn" [disabled]="!locationAvailable" (click)="homeSlide4(needMessage)" style="background: #177ec0">Next</button>
+          </div>
+        </div>
+  </ion-row>
+
+
+  <ion-row class="id5" style="display: none;">
+    <div id="test5">
+      <div class="care-design">
+        <ul>
+          <li class="active1"></li>
+          <li class="active1"></li>
+          <li class="active1"></li>
+          <li class="active1"></li>
+          <li class="active1"></li>
+        </ul>
+        <p>Share a few details so we can provide you with the best care</p>
+        <div class="gender-change">
+          <p style="color: #177ec0;">Do you authorize us to speak with another individual
+             regarding your care ? (e.g. spouse, doctor)
+          </p>
+          <ion-row>
+            <ion-col col-6 (click)="yes3('yes')">
+              <label class="yes3 active">
+                <input type="radio" name="behalf" value="yes" style="visibility: hidden;position: absolute">
+                <span>Y</span>
+              </label>
+              <p style="color: #000;margin: 3px;">Yes</p>
+            </ion-col>
+            <ion-col col-6 (click)="no3('no')">
+              <label class="no3">
+                <input type="radio" name="behalf" value="no" style="visibility: hidden;position: absolute">
+                <span>N</span>
+              </label>
+              <p style="color: #000;margin: 3px;">No</p>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <form [formGroup]="authForm" (ngSubmit)="homeSlide5(authForm.value)" style="position: relative;">
+        <div class="gender-change">
+            <div [ngClass]="{'error-border':!authForm.controls.name.valid && authForm.controls.name.touched}">
+                 <ion-input placeholder="Name" formControlName="name"></ion-input>
+          </div>
+          <div class="com" *ngIf="authForm.controls.name.hasError('required') && authForm.controls.name.touched">
+              <p class="com">Enter Name</p>
+            </div>
+            <div class="com" *ngIf="authForm.controls.name.hasError('pattern') && authForm.controls.name.touched">
+                <p class="com">Invalid Name</p>
+            </div>
+
+            <div [ngClass]="{'error-border':!authForm.controls.mail.valid && authForm.controls.mail.touched}">
+             <ion-input placeholder="Email" formControlName="mail"></ion-input>
+          </div>
+          <div class="com" *ngIf="authForm.controls.mail.hasError('required') && authForm.controls.mail.touched">
+              <p class="com">Enter E-mail</p>
+          </div>
+            <div class="com" *ngIf="authForm.controls.mail.hasError('pattern') && authForm.controls.mail.touched">
+              <p class="com">Invalid E-mail</p>
+            </div>
+            <div [ngClass]="{'error-border':!authForm.controls.mobile.valid && authForm.controls.mobile.touched}">
+           <ion-input placeholder="Phone Number" type="tel" formControlName="mobile"></ion-input>
+           </div>
+           <div class="com"  *ngIf="authForm.controls.mobile.hasError('required') && authForm.controls.mobile.touched">
+              <p class="com">Required phone</p>
+         </div>
+         <div class="com"  *ngIf="authForm.controls.mobile.hasError('pattern') && authForm.controls.mobile.touched">
+              <p class="com">Invalid phone</p>
+         </div>
+
+          <p style="font-size: 12px;text-align: center;color: #000;">By clicking "Yes" I agree to allow Nursing on Demand to share this information with the person identified
+            above, all medical providers and/or medical professionals associated directly with my care.</p>
+        </div>
+        <button ion-button full class="next-btn"   type ="submit" style="background: #177ec0">Next</button>
+
+      <div class="kl50"></div>
+
+      </form>
+
+      </div>
+
+   
+    </div>
+  </ion-row>
+
+</ion-content>

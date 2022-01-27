@@ -1,0 +1,74 @@
+page-contactus {
+  .scroll-content {
+    background: #f6f7fb;
+}
+input{
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+  margin: 15px auto;
+  height: 40px;
+  padding: 7px;
+  background: #fff;
+  display: block;
+}
+textarea{
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+  margin: 15px auto;
+  height: 100px;
+  padding: 7px;
+  background: #fff;
+  display: block;
+  resize: none;
+}
+.btn-login{
+  background-color: #177ec0;
+    width: 80%;
+    border-radius: 8px;
+    margin: 15% auto;
+    height: 40px;
+    display: block;
+    text-transform: capitalize
+}
+.btn-login:hover{
+  background-color: #177ec0 !important;
+}
+button.btn-login.button.button-md.button-default.button-default-md.button-full.button-full-md {
+  opacity: 1;
+}
+.heading{
+  text-align: center;
+    padding: 5% 2%;
+    font-size: 13px;
+    color: #101010;
+    line-height: 20px;
+}
+h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+}
+.call{
+  text-align: center;
+    color: #177ec0;
+    margin: 0;
+    position: relative;
+}
+.links {
+  text-align: center;
+  margin: 5px;
+}
+.links a{
+  color: #666;
+  text-decoration: none;
+}
+ion-title{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 12px;
+}
+}

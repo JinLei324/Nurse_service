@@ -1,0 +1,53 @@
+<!--
+  Generated template for the DidyouKnowPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Did you Know</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+ <div class="family_one" *ngFor="let did of blogList" >
+    <img style="    height: 200px;
+    width: 100%;
+    object-fit: cover;" src={{did.blog_image}} (click)="diddetails(did.id)"/>
+    <span style="color: #177ec0;
+    font-size: 12px;
+    margin-left: 12px;
+    font-weight: bold;">{{did.created_date | date}}</span>
+    <h1 style="    margin-top: 4px;
+    font-size: 18px;
+    color: #000;
+    margin-left: 10px;
+    font-weight: bold;">{{did.blog_name}}</h1>
+    <p style="    display: -webkit-box;
+    max-width: 95%;
+    height: 56px;
+    margin: 0 auto;
+    font-size: 11px;
+    display: -webkit-box;
+    line-height: 19px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; margin-bottom: 5px;">{{did.blog_description}}
+    </p>
+ </div>
+
+   
+
+
+
+
+</ion-content>

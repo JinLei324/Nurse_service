@@ -1,0 +1,72 @@
+
+> nursingondemand@0.0.1 ionic:build D:\ionicApp\nursingondemand
+> ionic-app-scripts build "="
+
+[11:47:55]  ionic-app-scripts 3.1.9 
+[11:47:55]  build dev started ... 
+[11:47:55]  clean started ... 
+[11:47:55]  clean finished in 10 ms 
+[11:47:55]  copy started ... 
+[11:47:55]  deeplinks started ... 
+[11:47:55]  deeplinks finished in 40 ms 
+[11:47:55]  transpile started ... 
+[11:47:58]  transpile finished in 3.48 s 
+[11:47:58]  preprocess started ... 
+[11:47:58]  preprocess finished in less than 1 ms 
+[11:47:58]  webpack started ... 
+[11:47:58]  copy finished in 3.65 s 
+[11:48:04]  webpack finished in 5.88 s 
+[11:48:04]  sass started ... 
+[11:48:05]  sass finished in 971 ms 
+[11:48:05]  postprocess started ... 
+[11:48:05]  postprocess finished in less than 1 ms 
+[11:48:05]  lint started ... 
+[11:48:05]  build dev finished in 10.49 s 
+            'NavParams' is declared but its value is never read. 
+
+[2m       L1:  [22mimport { Component } from '@angular/core';
+[2m       L2:  [22mimport { IonicPage, NavController, [41mN[49m[41ma[49m[41mv[49m[41mP[49m[41ma[49m[41mr[49m[41ma[49m[41mm[49m[41ms[49m } from 'ionic-angular';
+[2m       L3:  [22mimport {ViewChild}from '@angular/core';
+
+            All imports on this line are unused. 
+
+[2m       L2:  [22mimport { IonicPage, NavController, NavParams } from 'ionic-angular';
+[2m       L3:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {NursingslidePage} from "../nursingslide/nursingslide";
+
+            All imports on this line are unused. 
+
+[2m       L7:  [22mimport { ListPage } from '../pages/list/list';
+[2m       L8:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {WelcomeloginPage} from "../pages/welcomelogin/welcomelogin";
+[2m       L9:  [22mimport {LoginPage} from "../pages/login/login";
+
+            All imports on this line are unused. 
+
+[2m       L8:  [22mimport {WelcomeloginPage} from "../pages/welcomelogin/welcomelogin";
+[2m       L9:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {LoginPage} from "../pages/login/login";
+[2m      L10:  [22mimport {SignupPage} from "../pages/signup/signup";
+
+            All imports on this line are unused. 
+
+[2m       L9:  [22mimport {LoginPage} from "../pages/login/login";
+[2m      L10:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {SignupPage} from "../pages/signup/signup";
+[2m      L11:  [22mimport {TermsusePage} from "../pages/termsuse/termsuse";
+
+            All imports on this line are unused. 
+
+[2m      L10:  [22mimport {SignupPage} from "../pages/signup/signup";
+[2m      L11:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {TermsusePage} from "../pages/termsuse/termsuse";
+[2m      L12:  [22mimport {NursingslidePage} from "../pages/nursingslide/nursingslide";
+
+            All imports on this line are unused. 
+
+[2m      L11:  [22mimport {TermsusePage} from "../pages/termsuse/termsuse";
+[2m      L12:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {NursingslidePage} from "../pages/nursingslide/nursingslide";
+[2m      L13:  [22mimport {NursingselectPage} from "../pages/nursingselect/nursingselect";
+
+            All imports on this line are unused. 
+
+[2m      L12:  [22mimport {NursingslidePage} from "../pages/nursingslide/nursingslide";
+[2m      L13:  [22m[41mi[49m[41mm[49m[41mp[49m[41mo[49m[41mr[49m[41mt[49m {NursingselectPage} from "../pages/nursingselect/nursingselect";
+[2m      L14:  [22mimport {NeedscarePage} from "../pages/needscare/needscare";
+
+[11:48:08]  lint finished in 2.83 s 

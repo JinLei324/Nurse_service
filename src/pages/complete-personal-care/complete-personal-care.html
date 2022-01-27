@@ -1,0 +1,69 @@
+<!--
+  Generated template for the CompleteRequestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title style="text-align: center">Nursing on Demand</ion-title>
+  </ion-navbar>
+  <div class="header_icon">
+    <img src="assets/imgs/inf.png" style="margin-right: 2px;" (click)="info()">
+  </div>
+</ion-header>
+
+
+<ion-content>
+    <div class="info-popup">
+      <div class="info-box">
+        <ion-icon name="close" class="close" (click)="close()"></ion-icon>
+  
+        <p>RN/LPN=RED</p>
+        <p>CNA/MA=BLUE</p>
+        <p>HHA/COMPANION=ORANGE</p>
+      </div>
+    </div>
+  
+    <!-- <google-places-autocomplete (callback)="detail($event[0])" key="AIzaSyCYQHauEaqFsGItbv4ZyHBGWm2FDxsF2nQ"></google-places-autocomplete> -->
+    <div id="map" style="width: 100%;height:550px;"></div>
+    <!-- <div #map class="map"></div>  -->
+    
+    <!-- <ion-slides loop ="true">
+  
+      <ion-slide *ngFor="let nurse of nursesList">
+       
+          
+        <ion-row>
+          <div class="map-box">
+              {{nurse.firstname}} {{nurse.lastname}} is {{nurse.arrivel_time}} away
+            <span style="float: right;">{{nurse.distance}}KM</span>
+          </div>
+          <ion-col col-6>
+            <img src={{nurse.image?nurse.image:defaultNurse}} style=" width: 100px;
+            padding: 8px;
+            height: 100px;
+            border-radius: 9px;">
+          </ion-col>
+          <ion-col col-6>
+            <p>{{nurse.firstname}} {{nurse.lastname}}</p>
+            <p>{{nurse.nurse_type}} </p>
+            <p>{{nurse.gender}}</p>
+            <p>{{nurse.phone_number}}</p>
+          </ion-col>
+        </ion-row>
+        <p style="text-align: right; margin: 0 0px 10px">
+          <button ion-button clear style="background: transparent; color:#177ec0; margin: 0 " (click)="goToSlide()">Next</button>
+        </p>
+        <button ion-button style="background: #177ec0" class="btn_req" (click)="bookNurse(nurse.id,nurse.phone_number)">Request Care</button>
+      </ion-slide>
+  
+    </ion-slides> -->
+</ion-content>
+<ion-footer>
+  <button ion-button full style="background: #177ec0" class="btn_req" (click)="bookNurse()">Request Care</button>
+</ion-footer>

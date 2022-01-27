@@ -1,0 +1,72 @@
+<!--
+  Generated template for the PaymentMethodPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="bg-pricing">
+    <h3>Ala Carte (Hourly Rates)</h3>
+  </div>
+
+ <ion-row padding>
+<div class="select-visit">
+  <p>Select your Desired plan</p>
+ <select>
+  <option>16 Visits Per Month</option>
+  <option>12 Visits Per Month</option>
+  <option>6 Visits Per Month</option>
+ </select>
+
+  <select>
+    <option selected>Select your Card Type</option>
+    <option>1 Card</option>
+    <option>2 Card</option>
+  </select>
+</div>
+
+     <div class="card-number">
+         <input type="text" placeholder="Name on Credit Card">
+         <input type="number" placeholder="Card Number">
+         <input type="email" placeholder="Email">
+         <input type="email" placeholder="CVV (Card Verification Value)">
+         <p>A 3-4 digit number found on the back of your credit card on signature panel. </p>
+
+         <ion-item>
+             <ion-label>Expiration Date</ion-label>
+             <ion-datetime displayFormat="MMMM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+         </ion-item>
+
+         <ion-item class="terms10">
+             <ion-toggle  checked="false"></ion-toggle>
+             <ion-label> I Agree to <span style="color: red;cursor: pointer;" (click)="termsOf('http://webappsol.biz/WORKSPACE2/nursingondemand/home/terms')"> Terms of Use </span> and  <span  style="color: green;cursor: pointer;" (click)="privacy('http://webappsol.biz/WORKSPACE2/nursingondemand/home/privacy')">Privacy Policy</span>  </ion-label>
+         </ion-item>
+
+         <button ion-button class="btn-pay" full (click)="paymentAlart()">Pay</button>
+
+     </div>
+ </ion-row>
+<div class="alrt_payment">
+  <div class="alrt_payment_box">
+    <p>
+        Your desired plan has successfully activated.
+    </p>
+    <button ion-button small class="payment_ok" (click)="nursingOpen()">Ok</button>
+  </div>
+  
+</div>
+
+
+</ion-content>

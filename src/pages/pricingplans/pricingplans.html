@@ -1,0 +1,46 @@
+<!--
+  Generated template for the PricingplansPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pricing</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="price_box1" style="margin-top: 15px;" *ngFor="let price of priceingList">
+    <h2 class="pricing_heading">
+      {{price.plan_name}}
+    </h2>
+
+    <ul *ngFor="let detail of price.plan_detail">
+      <li class="list_para">{{detail.visits}} Visits per Month: {{detail.price | currency: 'USD': true}} (includes {{detail.free_visits}} free
+        visits) </li>
+    </ul>
+
+    <!-- <button ion-button class="buy_btn" (click)="buy(price.id,price.plan_name)">Buy</button> -->
+  </div>
+
+  <div class="price_box1" style="margin-top: 15px;" *ngFor="let price of hourlyplan">
+    <h2 class="pricing_heading">
+      {{price.plan_name}}
+    </h2>
+
+    <ul *ngFor="let detail of price.pricing_details">
+      <li class="list_para">{{detail.type}} : {{detail.price | currency: 'USD': true}} per Hour </li>
+    </ul>
+
+    <!-- <button ion-button class="buy_btn" (click)="buy(price.id,price.plan_name)">Buy</button> -->
+  </div>
+
+</ion-content>

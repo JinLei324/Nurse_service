@@ -1,0 +1,7 @@
+{
+  "name": "nursingondemand",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

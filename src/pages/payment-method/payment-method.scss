@@ -1,0 +1,130 @@
+page-payment-method {
+  .toolbar-background{
+    background-color: #374fcc;
+    color:#ffff;
+  }
+  .toolbar-title{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .toolbar{
+    min-height: 50px;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #fff;
+  }
+  .segment-md .segment-button{
+    text-transform: inherit;
+    font-size: 14px;
+  }
+  .bg-pricing h3{
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+  }
+  .bg-pricing{
+    background-color: #009688;
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+  }
+  .select-visit select{
+    width: 100%;
+    padding: 6px;
+    border-color: #d7d3d3;
+    color: #ffffff;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    background-color: #374fcc;
+    height: 35px;
+  }
+  .select-visit{
+    width: 100%;
+  }
+  .select-visit p{
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+  .card-number{
+    width: 100%;
+  }
+  .card-number input{
+    padding: 6px;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+    height: 35px;
+    margin-top: 10px;
+  }
+  .card-number p{
+    font-size: 12px;
+    line-height: 19px;
+    margin-bottom: 0;
+  }
+  .item-md,.item-ios{
+    padding-left: 0;
+  }
+  ion-label{
+    font-size: 14px;
+    color: #3F51B5 !important;
+  }
+  .item-md.item-toggle ion-label,.item-ios.item-toggle ion-label{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+  }
+  .item-md .toggle-md,  .item-ios .toggle-ios{
+    position: absolute;
+    left: 0;
+  }
+  .terms10.item-block .item-inner, .terms10.item-block .item-inner{
+    border: none;
+  }
+  .item-md .toggle-md{
+    padding: 12px 8px 12px 0px;
+  }
+  .btn-pay{
+    background-color: #374fcc;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 6px;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button{
+    color:#fff;
+  }
+  .alrt_payment{
+    padding: 15px;
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    z-index: 9999;
+    top: 40%;
+    display: none;
+  }
+  .alrt_payment_box{
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid #0076ff;
+    border-radius: 5px;
+  }
+  .payment_ok{
+    width: 50%;
+    background: #0076ff;
+  }
+  ion-title{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 12px;
+  }
+}

@@ -1,0 +1,44 @@
+page-services-info {
+    .infoCat .lab_con{
+
+        text-align: center;
+        width: 100% 
+    }
+    .infoConta{
+
+        line-height: 22px;
+        font-size: 12px;
+        border-bottom: 1px solid #ece7e7;
+    }
+
+
+    .lab_con{
+        left: 138px;
+top: 85px;
+width: 114px;
+height: 26px;
+line-height: 26px;
+color: rgba(0, 150, 136, 1);
+font-size: 18px;
+text-align: center;
+font-family: Arial;
+
+    }
+    .toolbar-background-md{
+        background-color: #374fcc;
+        color:#ffff;
+      }
+      .toolbar-title-md{
+        color: #fff;
+        font-size: 17px;
+      }
+      .toolbar-md{
+        min-height: 50px;
+      }
+      ion-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 12px;
+      }
+}
